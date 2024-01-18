@@ -1,4 +1,4 @@
-import type { NavItem } from "../../../Learning-Astro/src/types/interfaces.ts";
+import type { NavItem } from "../types/interfaces.ts";
 const navBarItems: NavItem[] = [
     {
         title: "Home",

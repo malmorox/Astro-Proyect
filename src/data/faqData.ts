@@ -1,4 +1,4 @@
-import type { FaQ } from "../../../Learning-Astro/src/types/interfaces.ts";
+import type { FaQ } from "../types/interfaces.ts";
 const frequentlyQuestions: FaQ[] = [
     {
         question: "",

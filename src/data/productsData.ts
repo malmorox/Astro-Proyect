@@ -1,4 +1,4 @@
-import type { Product } from "../../../Learning-Astro/src/types/interfaces.ts";
+import type { Product } from "../types/interfaces.ts";
 const products: Product[] = [
     {
         name: "",

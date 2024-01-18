@@ -1,5 +1,5 @@
 ---
-import navBarItems from "../../../Learning-Astro/src/data/navItemsData";
+import navBarItems from "../data/navItemsData";
 import NavContainer from "./NavContainer.astro";
 import NavItem from "./NavItem.astro";
 interface Props {
@@ -9,14 +9,14 @@ interface Props {
 const { logo } = Astro.props;
 ---
 
-<header class="header fixed flex top-0 w-full px-6 py-4 z-50">
+<header class="header fixed flex bg-blue-50 top-0 w-full px-6 py-4 z-50">
     <div class="header-logo">
         <img alt={logo} src={logo} class="header-logo">
     </div>
     <NavContainer class="header-nav">
         {
             navBarItems.map(({ title, url }) => (
-                    <NavItem title={title} url={url} class="header-nav-item"/>
+                    <NavItem title={title} url={url} class="header-nav-item text-white mr-2.5"/>
             ))
         }
     </NavContainer>
@@ -26,7 +26,7 @@ const { logo } = Astro.props;
 </header>
 <style>
     .header {
-        background: aliceblue;
+
     }
     .header-logo {
 
