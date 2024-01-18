@@ -9,17 +9,19 @@ interface Props {
 const { logo } = Astro.props;
 ---
 
-<header class="header fixed flex bg-blue-50 top-0 w-full px-6 py-4 z-50">
+<header class=º"header fixed flex bg-blue-50 top-0 w-full px-6 py-4 z-50">
     <div class="header-logo">
         <img alt={logo} src={logo} class="header-logo">
     </div>
-    <NavContainer class="header-nav">
-        {
-            navBarItems.map(({ title, url }) => (
-                    <NavItem title={title} url={url} class="header-nav-item text-white mr-2.5"/>
-            ))
-        }
-    </NavContainer>
+    <div class="header-nav">
+        <NavContainer>
+            {
+                navBarItems.map(({ title, url }) => (
+                        <NavItem title={title} url={url} class="text-white mr-2.5"/>
+                ))
+            }
+        </NavContainer>
+    </div>
     <div class="header-">
 
     </div>

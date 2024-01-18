@@ -1,6 +1,5 @@
 ---
 import { FaQ } from "../types/interfaces";
-import Separator from "./Separator.astro";
 
 interface Props {
     item: FaQ;
@@ -11,7 +10,6 @@ const { item } = Astro.props;
 <div class="faqItem">
     <h3>{item.question}</h3>
     <p>{item.response}</p>
-    <Separator />
 </div>
 
 <style>
