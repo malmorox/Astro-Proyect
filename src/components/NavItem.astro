@@ -1,0 +1,11 @@
+---
+import type { NavItem } from "../../../Learning-Astro/src/types/interfaces";
+
+interface Props extends NavItem {}
+
+const { title, url } = Astro.props;
+---
+
+<li>
+    <a href={url}> {title}</a>
+</li>

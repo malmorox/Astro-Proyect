@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Main.astro';
+import Product from '../components/Product.astro';
+import JSONdata from '../../../Learning-Astro/src/data/menuData.json';
+---
+
+<Layout title="Pedidos | Tokugawa">
+    <main>
+        <div class="menu-category-container">
+            <ul class="menu-category-list">
+                {JSONdata.map(category => (
+                    <li class="menu-category-list-item"> {category["menu-category"]}</li>
+                ))}
+            </ul>
+        </div>
+        <div role="list" class="menu-products-container">
+            {load(({params}) => {
+                const selectedCategory = JSONdata.find(category => category["menu-category"].toLowerCase() === params.category);
+                return selectedCategory && selectedCategory.products.map(product => (
+                    <Product
+                        key={product.name}
+                        name={product.name}
+                        description={product.description}
+                        image={product.image}
+                        price={product.price}
+                    />
+                ));
+            })}
+        </div>
+    </main>
+</Layout>

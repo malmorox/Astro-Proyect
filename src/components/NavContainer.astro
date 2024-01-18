@@ -1,0 +1,29 @@
+<ul class="nav-container">
+    <slot />
+</ul>
+<style>
+    .nav-container {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 5px;
+        width: 33%;
+        z-index: 100;
+        position: relative;
+        margin-bottom: -108px;
+        background: linear-gradient(
+                90deg,
+                rgba(23, 47, 73, 0.5),
+                rgba(23, 47, 73, 0.5) 58%,
+                rgba(23, 47, 73, 0)
+        );
+    }
+
+    .nav-bar {
+        position: relative;
+        top: 97px;
+        z-index: 100;
+        width: 33%;
+    }
+</style>

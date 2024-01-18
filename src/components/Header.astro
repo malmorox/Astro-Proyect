@@ -1,0 +1,48 @@
+---
+import navBarItems from "../../../Learning-Astro/src/data/navItemsData";
+import NavContainer from "./NavContainer.astro";
+import NavItem from "./NavItem.astro";
+interface Props {
+    logo: string;
+}
+
+const { logo } = Astro.props;
+---
+
+<header class="header fixed flex top-0 w-full px-6 py-4 z-50">
+    <div class="header-logo">
+        <img alt={logo} src={logo} class="header-logo">
+    </div>
+    <NavContainer class="header-nav">
+        {
+            navBarItems.map(({ title, url }) => (
+                    <NavItem title={title} url={url} class="header-nav-item"/>
+            ))
+        }
+    </NavContainer>
+    <div class="header-">
+
+    </div>
+</header>
+<style>
+    .header {
+        background: aliceblue;
+    }
+    .header-logo {
+
+    }
+    .header-logo > img {
+
+    }
+    .header-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .header-nav > .header-nav-item {
+        color: #ffffff;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 15px;
+    }
+</style>
